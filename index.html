@@ -208,9 +208,9 @@
             <p>100% results in board examinations.</p>
           </div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+        <div class="academic-prev swiper-button-prev"></div>
+        <div class="academic-next swiper-button-next"></div>
+        <div class="academic-pagination swiper-pagination"></div>
       </div>
     </div>
     <div class="section">
@@ -680,12 +680,12 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="achiever">
       <h2 id="achieve">OUR ACHIEVERS</h2>
 
-      <div class="lead-testimonial-cont">
-        <div class="lead-tstmnl-slider">
-          <div class="lead-tstmnl-slide">
+      <div class="lead-testimonial-cont swiper test-mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide lead-testimonial-flex">
             <div class="lead-tstmnl-img">
               <img src="images/pop1.png" />
             </div>
@@ -702,7 +702,7 @@
               </ul>
             </div>
           </div>
-          <div class="lead-tstmnl-slide">
+          <div class="swiper-slide lead-testimonial-flex">
             <div class="lead-tstmnl-img">
               <img src="images/pop5.png" />
             </div>
@@ -719,7 +719,7 @@
               </ul>
             </div>
           </div>
-          <div class="lead-tstmnl-slide">
+          <div class="swiper-slide lead-testimonial-flex">
             <div class="lead-tstmnl-img">
               <img src="images/pop2.png" />
             </div>
@@ -735,7 +735,7 @@
               </ul>
             </div>
           </div>
-          <div class="lead-tstmnl-slide">
+          <div class="swiper-slide lead-testimonial-flex">
             <div class="lead-tstmnl-img">
               <img src="images/pop3.png" />
             </div>
@@ -751,15 +751,10 @@
               </ul>
             </div>
           </div>
-          <a class="prev" onclick="plusSlides(-1)">❮</a>
-          <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
-        <div class="dot-container">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-        </div>
+        <div class="test-mySwiper-button-next swiper-button-prev"></div>
+        <div class="test-mySwiper-button-prev swiper-button-next"></div>
+        <div class="test-mySwiper-pagination swiper-pagination"></div>
       </div>
     </div>
     <div class="section section-footer" id="contact">
@@ -882,7 +877,7 @@
     <!-- Initialize Swiper -->
     <script>
       var width = window.innerWidth;
-      var swiper = new Swiper(".mySwiper", {
+      const swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
         slidesPerView: width > 768 ? 3 : 1,
         // spaceBetween: 30,
@@ -896,12 +891,28 @@
           slideShadows: true,
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".academic-prev",
+          prevEl: ".academic-next",
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".academic-pagination",
           clickable: true,
+        },
+      });
+      const testswiper = new Swiper(".test-mySwiper", {
+        centeredSlides: true,
+        loop:true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".test-mySwiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".test-mySwiper-button-next",
+          prevEl: ".test-mySwiper-button-prev",
         },
       });
     </script>

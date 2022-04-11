@@ -1925,7 +1925,7 @@ BUTTON
   padding-left: 16px;
   border-style: none;
   border-radius: 3px;
-  background-color:rgb(0 0 0 / 6%);
+  background-color: rgb(0 0 0 / 6%);
   color: #000;
   resize: vertical;
 }
@@ -3238,53 +3238,25 @@ FONT
 
 ------------------------------------------------------------------*/
 
-@font-face {
-  font-family: "Fa brands 400";
-  src: url("../fonts/fa-brands-400.woff2") format("woff2"),
-    url("../fonts/fa-brands-400.eot") format("embedded-opentype"),
-    url("../fonts/fa-brands-400.woff") format("woff"),
-    url("../fonts/fa-brands-400.ttf") format("truetype"),
-    url("../fonts/fa-brands-400.svg") format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
-
 .lead-testimonial-cont {
   width: 100%;
   max-width: 1170px;
-  min-width: 1170px;
-  height: 230px;
-  margin: 0 auto;
+  margin: 30px auto 0;
   background-color: #fff;
   padding: 30px;
   position: relative;
-  box-shadow: 4px 8px 8px #a19cb6;
+  box-shadow: 5px 5px 12px 12px #05316b2b;
+  border-radius: 200px;
+
 }
 
-.lead-testimonial-cont:after {
-  position: absolute;
-  content: "";
-  bottom: -31px;
-  left: 50%;
-  transform: translateX(-50%);
 
-  width: 840px;
-  height: 31px;
-}
-
-.lead-testimonial-cont:before {
-  font-family: "Roboto", cursive;
-  position: absolute;
-  bottom: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 10px;
-  letter-spacing: 5px;
-  font-weight: 500;
-  white-space: nowrap;
-  color: #545454;
-  text-transform: uppercase;
+.lead-testimonial-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 33px;
 }
 
 #achieve {
@@ -3296,27 +3268,8 @@ FONT
   color: #05316b;
 }
 
-.lead-tstmnl-slider {
-  width: 100%;
-  height: 230px;
-  float: left;
-  overflow: hidden;
-}
 
-.lead-tstmnl-slide {
-  width: 100%;
-  max-width: 1140px;
-  height: 100%;
-  float: left;
-  padding: 10px 20px;
-}
-
-.lead-tstmnl-slide:focus {
-  outline: none;
-}
-
-.lead-tstmnl-slide .lead-tstmnl-img {
-  float: left;
+.lead-tstmnl-img {
   width: 160px;
   height: 160px;
   border-radius: 100%;
@@ -3324,7 +3277,7 @@ FONT
   overflow: hidden;
 }
 
-.lead-tstmnl-slide .lead-tstmnl-img img {
+ .lead-tstmnl-img img {
   width: 100%;
 }
 
@@ -3415,7 +3368,9 @@ FONT
 .lead-tstmnl-slider .slick-dots li.slick-active {
   background-color: #e73022;
 }
-
+#achiever{
+  padding-bottom: 20px;
+}
 .section.reg {
   background: linear-gradient(90deg, #033169, #17f4fd);
 }
@@ -3633,73 +3588,95 @@ FONT
   color: #fff;
 }
 
-@media screen and (max-width: 768px){
-  #contact{
+@media screen and (max-width: 768px) {
+  #contact {
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .award-cards{
+
+  .award-cards {
     margin-bottom: 10px;
   }
-  .col.news-cols{
+
+  .col.news-cols {
     flex-direction: column;
   }
-  .news-cards{
+
+  .news-cards {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
-  .row-2{
+
+  .row-2 {
     flex-direction: column;
   }
-  .col-2{
+
+  .col-2 {
     width: 100%;
   }
-  .about-image{
+
+  .about-image {
     padding: 50px 0;
   }
-  .about-image h1{
+
+  .about-image h1 {
     font-size: 36px;
     text-align: center;
   }
-  .join-text{
-    padding:  30px 50px;
+
+  .join-text {
+    padding: 30px 50px;
   }
-  .main-course,.main-course2{
+
+  .main-course, .main-course2 {
     flex-direction: column;
-   
+
   }
-  img{
+
+  img {
     width: 100%;
   }
-  .pop-course{
+
+  .pop-course {
     padding: 20px;
   }
- 
-  .cou-1,.cou-2, .cou-3, .cou-4,.cou-5{
+
+  .cou-1, .cou-2, .cou-3, .cou-4, .cou-5 {
     padding: 10px;
     flex: unset;
     margin: 0;
   }
-  .cou-1 img,.cou-2 img, .cou-3 img, .cou-4 img,.cou-5 img {
+
+  .cou-1 img, .cou-2 img, .cou-3 img, .cou-4 img, .cou-5 img {
     margin-top: 30px;
     margin-bottom: 30px;
     padding: 1px;
   }
-  .main-course2{
+
+  .main-course2 {
     margin-top: 0;
   }
-  .nav-bar{
+
+  .nav-bar {
     width: 100%;
     height: 80px;
   }
-  .w-nav[data-collapse="medium"] .w-nav-menu{
-background-color: #fff;
+
+  .w-nav[data-collapse="medium"] .w-nav-menu {
+    background-color: #fff;
   }
- .section #courses-section{
+
+  .section #courses-section {
     padding: 10px;
   }
-  .insta{
+
+  .insta {
     margin: 25px auto 0;
+  }
+
+  .lead-testimonial-flex {
+    flex-direction: column;
+
   }
 }
