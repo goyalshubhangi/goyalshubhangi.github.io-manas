@@ -3250,7 +3250,6 @@ FONT
 
 }
 
-
 .lead-testimonial-flex {
   display: flex;
   flex-direction: row;
@@ -3268,7 +3267,6 @@ FONT
   color: #05316b;
 }
 
-
 .lead-tstmnl-img {
   width: 160px;
   height: 160px;
@@ -3277,7 +3275,7 @@ FONT
   overflow: hidden;
 }
 
- .lead-tstmnl-img img {
+.lead-tstmnl-img img {
   width: 100%;
 }
 
@@ -3298,15 +3296,6 @@ FONT
   overflow: hidden;
   font-size: 15px;
   line-height: 24px;
-}
-
-.lead-tstmnl-comment:before,
-.lead-tstmnl-comment:after {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-image: url(http://demosoft.indicsoft.com/SalmanDemo/onspon-html/other-pages/image/tstmnl-quate.png);
 }
 
 .lead-tstmnl-comment:before {
@@ -3368,9 +3357,11 @@ FONT
 .lead-tstmnl-slider .slick-dots li.slick-active {
   background-color: #e73022;
 }
-#achiever{
+
+#achiever {
   padding-bottom: 20px;
 }
+
 .section.reg {
   background: linear-gradient(90deg, #033169, #17f4fd);
 }
@@ -3389,7 +3380,7 @@ FONT
 }
 
 .achieve {
-  flex: 20%;
+  width: 425px;
   margin-top: -50px;
   position: absolute;
 }
@@ -3403,7 +3394,7 @@ FONT
 }
 
 .achieve-img {
-  flex: 60%;
+  width: calc(100% - 350px);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -3411,7 +3402,7 @@ FONT
   align-items: center;
   justify-content: space-between;
   padding: 25px;
-  margin-left: 25%;
+  margin-left: 350px;
 }
 
 .imgg {
@@ -3495,6 +3486,9 @@ FONT
 .about-image {
   flex: 60%;
   padding: 100px;
+  background-image: url('../images/about.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .about-image h1 {
@@ -3677,6 +3671,22 @@ FONT
 
   .lead-testimonial-flex {
     flex-direction: column;
+  }
 
+  .achieve {
+    width: 100%;
+    margin-top: 0;
+    position: relative;
+  }
+
+  .achieve-img {
+    width: 100%;
+    flex-direction: column;
+    margin-left: 0;
+    padding: 25px;
+  }
+
+  .imgg {
+    width: 175px;
   }
 }
