@@ -14,14 +14,14 @@ if ($conn->connect_error) {
         . $conn->connect_error);
 }
   
-$name =  $_POST['name-2'];
-$email = $_POST['email-2'];
-$message = $_POST['field-2'];
+$name =  $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
 
 $sql ="INSERT INTO `contact_form` (`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
   
 if ($conn->query($sql) === TRUE) {
-    echo "record inserted successfully";
+    echo "DONE";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 } 
