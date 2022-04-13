@@ -1,12 +1,14 @@
 function submitForm(form) {
-  const name = document.getElementById('name-2');
-  const email = document.getElementById('email-2');
-  const message = document.getElementById('field-2');
+  const name = document.getElementById('name-2').value;
+  const email = document.getElementById('email-2').value;
+  const message = document.getElementById('field-2').value;
   const doneMsg = document.querySelector('.w-form-done');
   const failMsg = document.querySelector('.w-form-fail');
 
   const xhr = new XMLHttpRequest();
+  xhr.open("POST", "cont.php");
 
+  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.addEventListener("load", (e) => {
     form.reset();
     if (xhr.responseText === 'DONE') {
@@ -24,8 +26,7 @@ function submitForm(form) {
     failMsg.style.display = 'block';
   });
 
-  xhr.open("POST", "cont.php");
-  xhr.send({ name, email, message });
+  xhr.send('name=' + name + '&email=' + email + '&message=' + message);
 
   return false;
 }
